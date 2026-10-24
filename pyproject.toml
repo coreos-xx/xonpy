@@ -1,0 +1,30 @@
+[project]
+name = "xonpy"
+version = "0.1.0"
+description = "Brain Products X.on EEG headset over BLE (reverse-engineered protocol), with LSL output"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+dependencies = ["bleak>=0.22", "numpy"]
+
+[project.optional-dependencies]
+lsl = ["pylsl>=1.16"]
+gui = ["pyqtgraph", "PyQt6", "qasync"]
+dev = ["pytest"]
+
+[project.urls]
+Homepage = "https://github.com/coreos-xx/xonpy"
+
+[project.scripts]
+xonpy = "xonpy.__main__:main"
+
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["xonpy"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+
+# personal data: raw recordings and phone captures
+recordings/
+*.log
+bugreport*.zip
+xon_dump.txt
+/xon_notify.csv
